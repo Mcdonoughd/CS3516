@@ -1,0 +1,71 @@
+HTTP CLIENT & HTTP SERVER
+By Daniel McDonough (dmcdonough) 9/11
+
+To run the client, first open the command prompt and navigate to the proper directory, where http_client.cpp and
+http_server.cpp are located. To begin either run the command: make
+
+
+----
+
+To run an instance of the client, run the following command:
+
+.\http_client.c [-p] URL/IP PORT
+
+The -p flag is optional, and will result in the RTT being printed after the GET request is made.
+The URL/IP portion, can be any URL OR IP of any website of your choosing.
+The PORT, should always be 80 if you are trying to receive a webpage from outside of the host machine.
+
+Output:
+
+The HTTP response header provided by the server is printed to the terminal.
+If the URL/IP was given a path/file extension, then the resulting webpage will be printed into a file named the same as the path/file extension in the same directory.
+Otherwise, the result will be printed into index.html within the same directory.
+And if given the option the RTT will be printed out!
+
+Example Output: (./http_client -p pokemon.com 80)
+
+        Connected...
+        Data Send
+
+        File Requested: index.html
+        URL/IP: pokemon.com
+        HTTP/1.1 463
+        Server: nginx/1.13.12
+        Date: Wed, 12 Sep 2018 01:41:36 GMT
+        Content-Type: text/html
+        Content-Length: 8849
+        Connection: close
+        ETag: "5ad679b6-2291"
+        X-DIS-Request-ID: ec4c84f2cda014a9ae7dee1b69854e89
+        Set-Cookie: dis-remote-addr=68.191.38.162
+        Set-Cookie: dis-timestamp=2018-09-11T18:41:36-07:00
+        Set-Cookie: dis-request-id=ec4c84f2cda014a9ae7dee1b69854e89
+        X-Frame-Options: sameorigin
+
+        File index.html has been saved!
+        RTT in milliseconds: 34.000000
+
+----
+
+To run the server together on the same machine, open the command prompt in the same way as above. First
+run an instance of the server by running the following command:
+
+.\http_server.c PORT
+
+The only parameter for this command is the port which will be used by the server and client to communicate. The port
+value should be the same for both the server and the client, otherwise they will not be able to exchange information.
+Once you run the server, it will provide information on the IP address of the host machine, which you will need to
+input as one of the parameters for the client.
+
+The IP and port will vary depending on your machine and what you passed as the port for the server. To connect the client
+to the now running server, you should run the following command:
+
+.\http_client.c [--p] XXX.XXX.XX.X PORT
+
+Replace the XXX.XXX.XX.X with the IP that was given by the server and PORT with the port that the server is running on.
+
+
+Notes:
+  When running the server remember to put the server files in the root directory or from the client look for URL/Serverfiles/somefile
+
+  The server was Tested on the ccc machine using the url: https://users.wpi.edu/~dmcdonough/index.html
