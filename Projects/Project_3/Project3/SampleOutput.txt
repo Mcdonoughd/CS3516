@@ -1,0 +1,544 @@
+./project3 5
+At time 0.000, rtinit0() was called 
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1  9999  9999
+dest 2|  9999     3  9999
+dest 3|  9999  9999     7
+
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  3  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 1.080034
+At time t=0.000, node 0 sends packet to node 1 with: (0  1  3  7)
+    TOLAYER2: source: 0, dest: 2
+              costs:0  1  3  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 0.124745
+At time t=0.000, node 0 sends packet to node 2 with: (0  1  3  7)
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  3  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 0.586824
+At time t=0.000, node 0 sends packet to node 3 with: (0  1  3  7)
+At time 0.000, rtinit1() was called 
+                via     
+   D1 |     0     2
+  ----|-------------------------------
+dest 0|     1  9999
+dest 2|  9999     1
+dest 3|  9999  9999
+
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  1  9999  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 0.745790
+At time t=0.000, node 1 sends packet to node 0 with: (1  0  1  9999)
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  1  9999  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 0.609690
+At time t=0.000, node 1 sends packet to node 2 with: (1  0  1  9999)
+WARNING: source and destination not connected, ignoring packet!
+At time t=0.000, node 1 sends packet to node 3 with: (1  0  1  9999)
+At time 0.000, rtinit2() was called 
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3  9999  9999
+dest 1|  9999     1  9999
+dest 3|  9999  9999     2
+
+    TOLAYER2: source: 2, dest: 0
+              costs:3  1  0  2  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 1.224738
+At time t=0.000, node 2 sends packet to node 0 with: (3  1  0  2)
+    TOLAYER2: source: 2, dest: 1
+              costs:3  1  0  2  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 2.768510
+At time t=0.000, node 2 sends packet to node 1 with: (3  1  0  2)
+    TOLAYER2: source: 2, dest: 3
+              costs:3  1  0  2  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 0.810576
+At time t=0.000, node 2 sends packet to node 3 with: (3  1  0  2)
+At time 0.000, rtinit3() was called 
+                via     
+   D3 |     0     2
+  ----|-------------------------------
+dest 0|     7  9999
+dest 1|  9999  9999
+dest 2|  9999     2
+
+    TOLAYER2: source: 3, dest: 0
+              costs:7  9999  2  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 1.826770
+At time t=0.000, node 3 sends packet to node 0 with: (7  9999  2  0)
+WARNING: source and destination not connected, ignoring packet!
+At time t=0.000, node 3 sends packet to node 1 with: (7  9999  2  0)
+    TOLAYER2: source: 3, dest: 2
+              costs:7  9999  2  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 0.962070
+At time t=0.000, node 3 sends packet to node 2 with: (7  9999  2  0)
+MAIN: rcv event, t=0.125, at 2 src: 0, dest: 2, contents:   0   1   3   7
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3  9999  9999
+dest 1|     4     1  9999
+dest 3|    10  9999     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=0.587, at 3 src: 0, dest: 3, contents:   0   1   3   7
+                via     
+   D3 |     0     2
+  ----|-------------------------------
+dest 0|     7  9999
+dest 1|     8  9999
+dest 2|    10     2
+
+    TOLAYER2: source: 3, dest: 0
+              costs:7  8  2  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.586824
+            INSERTEVENT: future time will be 2.275775
+At time t=0.587, node 3 sends packet to node 0 with: (7  8  2  0)
+WARNING: source and destination not connected, ignoring packet!
+At time t=0.587, node 3 sends packet to node 1 with: (7  8  2  0)
+    TOLAYER2: source: 3, dest: 2
+              costs:7  8  2  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.586824
+            INSERTEVENT: future time will be 1.380520
+At time t=0.587, node 3 sends packet to node 2 with: (7  8  2  0)
+MAIN: rcv event, t=0.610, at 2 src: 1, dest: 2, contents:   1   0   1 9999
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2  9999
+dest 1|     4     1  9999
+dest 3|    10  9999     2
+
+    TOLAYER2: source: 2, dest: 0
+              costs:2  1  0  2  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.609690
+            INSERTEVENT: future time will be 3.166427
+At time t=0.610, node 2 sends packet to node 0 with: (2  1  0  2)
+    TOLAYER2: source: 2, dest: 1
+              costs:2  1  0  2  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.609690
+            INSERTEVENT: future time will be 3.956352
+At time t=0.610, node 2 sends packet to node 1 with: (2  1  0  2)
+    TOLAYER2: source: 2, dest: 3
+              costs:2  1  0  2  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.609690
+            INSERTEVENT: future time will be 0.867797
+At time t=0.610, node 2 sends packet to node 3 with: (2  1  0  2)
+MAIN: rcv event, t=0.746, at 0 src: 1, dest: 0, contents:   1   0   1 9999
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1  9999  9999
+dest 2|     2     3  9999
+dest 3|  9999  9999     7
+
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  2  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.745790
+            INSERTEVENT: future time will be 5.667306
+At time t=0.746, node 0 sends packet to node 1 with: (0  1  2  7)
+    TOLAYER2: source: 0, dest: 2
+              costs:0  1  2  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.745790
+            INSERTEVENT: future time will be 1.383899
+At time t=0.746, node 0 sends packet to node 2 with: (0  1  2  7)
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  2  7  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.745790
+            INSERTEVENT: future time will be 1.657278
+At time t=0.746, node 0 sends packet to node 3 with: (0  1  2  7)
+MAIN: rcv event, t=0.811, at 3 src: 2, dest: 3, contents:   3   1   0   2
+                via     
+   D3 |     0     2
+  ----|-------------------------------
+dest 0|     7     5
+dest 1|     8     3
+dest 2|    10     2
+
+    TOLAYER2: source: 3, dest: 0
+              costs:5  3  2  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.810576
+            INSERTEVENT: future time will be 3.981693
+At time t=0.811, node 3 sends packet to node 0 with: (5  3  2  0)
+WARNING: source and destination not connected, ignoring packet!
+At time t=0.811, node 3 sends packet to node 1 with: (5  3  2  0)
+    TOLAYER2: source: 3, dest: 2
+              costs:5  3  2  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.810576
+            INSERTEVENT: future time will be 1.565862
+At time t=0.811, node 3 sends packet to node 2 with: (5  3  2  0)
+MAIN: rcv event, t=0.868, at 3 src: 2, dest: 3, contents:   2   1   0   2
+                via     
+   D3 |     0     2
+  ----|-------------------------------
+dest 0|     7     4
+dest 1|     8     3
+dest 2|    10     2
+
+    TOLAYER2: source: 3, dest: 0
+              costs:4  3  2  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.867797
+            INSERTEVENT: future time will be 4.226752
+At time t=0.868, node 3 sends packet to node 0 with: (4  3  2  0)
+WARNING: source and destination not connected, ignoring packet!
+At time t=0.868, node 3 sends packet to node 1 with: (4  3  2  0)
+    TOLAYER2: source: 3, dest: 2
+              costs:4  3  2  0  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 0.867797
+            INSERTEVENT: future time will be 2.276489
+At time t=0.868, node 3 sends packet to node 2 with: (4  3  2  0)
+MAIN: rcv event, t=0.962, at 2 src: 3, dest: 2, contents:   7 9999   2   0
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     9
+dest 1|     4     1  9999
+dest 3|    10  9999     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=1.080, at 1 src: 0, dest: 1, contents:   0   1   3   7
+                via     
+   D1 |     0     2
+  ----|-------------------------------
+dest 0|     1  9999
+dest 2|     4     1
+dest 3|     8  9999
+
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  1  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.080034
+            INSERTEVENT: future time will be 5.743729
+At time t=1.080, node 1 sends packet to node 0 with: (1  0  1  8)
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  1  8  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.080034
+            INSERTEVENT: future time will be 4.103415
+At time t=1.080, node 1 sends packet to node 2 with: (1  0  1  8)
+WARNING: source and destination not connected, ignoring packet!
+At time t=1.080, node 1 sends packet to node 3 with: (1  0  1  8)
+MAIN: rcv event, t=1.225, at 0 src: 2, dest: 0, contents:   3   1   0   2
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1     4  9999
+dest 2|     2     3  9999
+dest 3|  9999     5     7
+
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  2  5  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.224738
+            INSERTEVENT: future time will be 6.817634
+At time t=1.225, node 0 sends packet to node 1 with: (0  1  2  5)
+    TOLAYER2: source: 0, dest: 2
+              costs:0  1  2  5  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.224738
+            INSERTEVENT: future time will be 5.663148
+At time t=1.225, node 0 sends packet to node 2 with: (0  1  2  5)
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  2  5  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 1.224738
+            INSERTEVENT: future time will be 2.077403
+At time t=1.225, node 0 sends packet to node 3 with: (0  1  2  5)
+MAIN: rcv event, t=1.381, at 2 src: 3, dest: 2, contents:   7   8   2   0
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     9
+dest 1|     4     1    10
+dest 3|    10  9999     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=1.384, at 2 src: 0, dest: 2, contents:   0   1   2   7
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     9
+dest 1|     4     1    10
+dest 3|    10  9999     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=1.566, at 2 src: 3, dest: 2, contents:   5   3   2   0
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     7
+dest 1|     4     1     5
+dest 3|    10  9999     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=1.657, at 3 src: 0, dest: 3, contents:   0   1   2   7
+                via     
+   D3 |     0     2
+  ----|-------------------------------
+dest 0|     7     4
+dest 1|     8     3
+dest 2|     9     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=1.827, at 0 src: 3, dest: 0, contents:   7 9999   2   0
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1     4  9999
+dest 2|     2     3     9
+dest 3|  9999     5     7
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=2.077, at 3 src: 0, dest: 3, contents:   0   1   2   5
+                via     
+   D3 |     0     2
+  ----|-------------------------------
+dest 0|     7     4
+dest 1|     8     3
+dest 2|     9     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=2.276, at 0 src: 3, dest: 0, contents:   7   8   2   0
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1     4    15
+dest 2|     2     3     9
+dest 3|  9999     5     7
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=2.276, at 2 src: 3, dest: 2, contents:   4   3   2   0
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     6
+dest 1|     4     1     5
+dest 3|    10  9999     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=2.769, at 1 src: 2, dest: 1, contents:   3   1   0   2
+                via     
+   D1 |     0     2
+  ----|-------------------------------
+dest 0|     1     4
+dest 2|     4     1
+dest 3|     8     3
+
+    TOLAYER2: source: 1, dest: 0
+              costs:1  0  1  3  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 2.768510
+            INSERTEVENT: future time will be 6.780353
+At time t=2.769, node 1 sends packet to node 0 with: (1  0  1  3)
+    TOLAYER2: source: 1, dest: 2
+              costs:1  0  1  3  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 2.768510
+            INSERTEVENT: future time will be 6.198489
+At time t=2.769, node 1 sends packet to node 2 with: (1  0  1  3)
+WARNING: source and destination not connected, ignoring packet!
+At time t=2.769, node 1 sends packet to node 3 with: (1  0  1  3)
+MAIN: rcv event, t=3.166, at 0 src: 2, dest: 0, contents:   2   1   0   2
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1     4    15
+dest 2|     2     3     9
+dest 3|  9999     5     7
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=3.956, at 1 src: 2, dest: 1, contents:   2   1   0   2
+                via     
+   D1 |     0     2
+  ----|-------------------------------
+dest 0|     1     3
+dest 2|     4     1
+dest 3|     8     3
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=3.982, at 0 src: 3, dest: 0, contents:   5   3   2   0
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1     4    10
+dest 2|     2     3     9
+dest 3|  9999     5     7
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=4.103, at 2 src: 1, dest: 2, contents:   1   0   1   8
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     6
+dest 1|     4     1     5
+dest 3|    10     9     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=4.227, at 0 src: 3, dest: 0, contents:   4   3   2   0
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1     4    10
+dest 2|     2     3     9
+dest 3|  9999     5     7
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=5.663, at 2 src: 0, dest: 2, contents:   0   1   2   5
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     6
+dest 1|     4     1     5
+dest 3|     8     9     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=5.667, at 1 src: 0, dest: 1, contents:   0   1   2   7
+                via     
+   D1 |     0     2
+  ----|-------------------------------
+dest 0|     1     3
+dest 2|     3     1
+dest 3|     8     3
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=5.744, at 0 src: 1, dest: 0, contents:   1   0   1   8
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1     4    10
+dest 2|     2     3     9
+dest 3|     9     5     7
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=6.198, at 2 src: 1, dest: 2, contents:   1   0   1   3
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     6
+dest 1|     4     1     5
+dest 3|     8     4     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=6.780, at 0 src: 1, dest: 0, contents:   1   0   1   3
+                via     
+   D0 |     1     2     3
+  ----|-------------------------------
+dest 1|     1     4    10
+dest 2|     2     3     9
+dest 3|     4     5     7
+
+    TOLAYER2: source: 0, dest: 1
+              costs:0  1  2  4  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 6.780353
+            INSERTEVENT: future time will be 8.295065
+At time t=6.780, node 0 sends packet to node 1 with: (0  1  2  4)
+    TOLAYER2: source: 0, dest: 2
+              costs:0  1  2  4  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 6.780353
+            INSERTEVENT: future time will be 7.960743
+At time t=6.780, node 0 sends packet to node 2 with: (0  1  2  4)
+    TOLAYER2: source: 0, dest: 3
+              costs:0  1  2  4  
+    TOLAYER2: scheduling arrival on other side
+            INSERTEVENT: time is 6.780353
+            INSERTEVENT: future time will be 7.599638
+At time t=6.780, node 0 sends packet to node 3 with: (0  1  2  4)
+MAIN: rcv event, t=6.818, at 1 src: 0, dest: 1, contents:   0   1   2   5
+                via     
+   D1 |     0     2
+  ----|-------------------------------
+dest 0|     1     3
+dest 2|     3     1
+dest 3|     6     3
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=7.600, at 3 src: 0, dest: 3, contents:   0   1   2   4
+                via     
+   D3 |     0     2
+  ----|-------------------------------
+dest 0|     7     4
+dest 1|     8     3
+dest 2|     9     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=7.961, at 2 src: 0, dest: 2, contents:   0   1   2   4
+                via     
+   D2 |     0     1     3
+  ----|-------------------------------
+dest 0|     3     2     6
+dest 1|     4     1     5
+dest 3|     7     4     2
+
+
+ Min cost didn't change. 
+MAIN: rcv event, t=8.295, at 1 src: 0, dest: 1, contents:   0   1   2   4
+                via     
+   D1 |     0     2
+  ----|-------------------------------
+dest 0|     1     3
+dest 2|     3     1
+dest 3|     5     3
+
+
+ Min cost didn't change. 
+
+Simulator terminated at t=8.295065, no packets in medium
+
