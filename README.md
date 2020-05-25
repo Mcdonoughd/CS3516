@@ -6,7 +6,7 @@ Here you will find the following Folders:
 
 
 Projects:
-&nbsp;	  A set of hw assignemnts
+&nbsp;	  A set of hw assignments
 
 
 Books:
@@ -22,7 +22,7 @@ Slides:
 
 
 Labs:
-&nbsp;	  set of in class lab assignemtns
+&nbsp;	  set of in class lab assignments
 
 
 # IMPORTANT
